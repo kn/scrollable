@@ -16,7 +16,7 @@ This div starts moving to right after document is scrolled by 30px. It continues
 
 ## Dependencies
 
-movable.js expects jQuery to be loaded. It should be compatible with the most of the recent jQuery versions but only v1.7 has been tested so far.
+scrollable.js expects jQuery to be loaded. It should be compatible with the most of the recent jQuery versions but only v1.7 has been tested so far.
 
 Make sure to include jQuery before scrollable.js.
 
