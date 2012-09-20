@@ -1,0 +1,15 @@
+{
+  "author": "Katsuya Noguchi <katsuya.noguchi@gmail.com> (www.katsuyan.com)",
+  "name": "scrollable",
+  "description": "JS lib that allows a DOM object to fade, move or rotate when the page is scrolled.",
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {
+      "connect": "2.4.4"
+    , "request": "2.10.0"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
