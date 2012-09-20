@@ -1,6 +1,6 @@
 ## scrollable.js
 
-JavaScript library that allows you to make your dom to move, fade and rotate when the page is scrolled.
+This JavaScript library allows you to make your dom to move, fade and rotate when the page is scrolled.
 
 ## Quick start
 
@@ -18,7 +18,7 @@ This div starts moving to right after document is scrolled by 30px. It continues
 
 movable.js expects jQuery to be loaded. It should be compatible with the most of the recent jQuery versions but only v1.7 has been tested so far.
 
-Make sure to include jQuery before movable.js.
+Make sure to include jQuery before scrollable.js.
 
 ## Movable
 
@@ -32,7 +32,7 @@ Data attributes:
 
 ## Fadable
 
-A DOM with `fadable` class fades in or out when page is scrolled.
+A DOM with `fadable` class fades in or out when the page is scrolled.
 
 Data attributes:
 
@@ -42,7 +42,7 @@ Data attributes:
 
 ## Rotatable
 
-A DOM with `rotatable` class rotates left or right when page is scrolled.
+A DOM with `rotatable` class rotates left or right when the page is scrolled.
 
 Data attributes:
 
@@ -56,9 +56,9 @@ Data attributes:
 If you are only using movable, fadable or rotatable, you can include only the files you need.
 There are following files available:
 
-pkg/movable.min.js
-pkg/fadable.min.js
-pkg/rotatable.min.js
+* pkg/movable.min.js
+* pkg/fadable.min.js
+* pkg/rotatable.min.js
 
 ## Reporting Bugs
 
