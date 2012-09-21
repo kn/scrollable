@@ -27,7 +27,7 @@
           when 'up', 'down'
             data.init = data.$elem.position().top
             data.pos = 'top'
-          when 'left', 'down'
+          when 'left', 'right'
             data.init = data.$elem.position().left
             data.pos = 'left'
         switch data.type
