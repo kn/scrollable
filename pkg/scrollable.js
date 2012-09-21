@@ -38,7 +38,7 @@
             data.pos = 'top';
             break;
           case 'left':
-          case 'down':
+          case 'right':
             data.init = data.$elem.position().left;
             data.pos = 'left';
         }
@@ -178,11 +178,17 @@
     var layers, updateRotatableLayers;
     layers = initializeRotatableLayers();
     updateRotatableLayers = function(e) {
-      var layer, scrollTop, _i, _len;
+      var degrees, layer, scrollTop, _i, _len;
       scrollTop = parseInt($(document).scrollTop());
       for (_i = 0, _len = layers.length; _i < _len; _i++) {
         layer = layers[_i];
-        layer.$elem.css('transform', "rotate(" + (getNewLayerDegrees(layer, scrollTop)) + "deg)");
+        degrees = getNewLayerDegrees(layer, scrollTop);
+        console.log(degrees);
+        layer.$elem.css('transform', "rotate(" + degrees + "deg)");
+        layer.$elem.css('-webkit-transform', "rotate(" + degrees + "deg)");
+        layer.$elem.css('-moz-transform', "rotate(" + degrees + "deg)");
+        layer.$elem.css('-ms-transform', "rotate(" + degrees + "deg)");
+        layer.$elem.css('-o-transform', "rotate(" + degrees + "deg)");
       }
       return true;
     };
@@ -202,7 +208,7 @@
         data.type = $layer.data('rotatable-type') || 'right';
         data.start = getNumberData($layer.data('rotatable-start')) || 0;
         data.end = getNumberData($layer.data('rotatable-end')) || $(document).height();
-        data.limit = 360 * getNumberData($layer.data('rotatable-times')) || 1;
+        data.limit = 360 * (getNumberData($layer.data('rotatable-times')) || 1);
         data.range = data.limit / (data.end - data.start);
         layers.push(data);
       }
@@ -215,7 +221,7 @@
     degrees = 0;
     switch (layer.type) {
       case 'left':
-        degrees = 0 - layer.range * diff;
+        degrees = layer.limit - layer.range * diff;
         break;
       case 'right':
         degrees = 0 + layer.range * diff;

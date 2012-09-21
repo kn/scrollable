@@ -38,7 +38,7 @@
             data.pos = 'top';
             break;
           case 'left':
-          case 'down':
+          case 'right':
             data.init = data.$elem.position().left;
             data.pos = 'left';
         }
