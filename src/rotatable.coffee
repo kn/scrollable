@@ -6,7 +6,6 @@
       scrollTop = parseInt $(document).scrollTop()
       for layer in layers
         degrees = getNewLayerDegrees(layer, scrollTop)
-        console.log degrees
         layer.$elem.css 'transform', "rotate(#{degrees}deg)"
         layer.$elem.css '-webkit-transform', "rotate(#{degrees}deg)"
         layer.$elem.css '-moz-transform', "rotate(#{degrees}deg)"

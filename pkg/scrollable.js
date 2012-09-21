@@ -183,7 +183,6 @@
       for (_i = 0, _len = layers.length; _i < _len; _i++) {
         layer = layers[_i];
         degrees = getNewLayerDegrees(layer, scrollTop);
-        console.log(degrees);
         layer.$elem.css('transform', "rotate(" + degrees + "deg)");
         layer.$elem.css('-webkit-transform', "rotate(" + degrees + "deg)");
         layer.$elem.css('-moz-transform', "rotate(" + degrees + "deg)");
