@@ -2,6 +2,8 @@
 
 This JavaScript library allows you to make your dom to move, fade and rotate when the page is scrolled.
 
+[Demo](http://scrollable-demo.herokuapp.com)
+
 ## Quick start
 
 Download scrollable.js from `git clone git://github.com/katsuyan/scrollable/pkg/scrollable.min.js`.
