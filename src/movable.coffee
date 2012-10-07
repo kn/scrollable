@@ -25,10 +25,10 @@
         data.end = getNumberData($layer.data 'movable-end') || $(document).height()
         switch data.type
           when 'up', 'down'
-            data.init = data.$elem.position().top
+            data.init = getPositionNum(data.$elem.css('top'))
             data.pos = 'top'
           when 'left', 'right'
-            data.init = data.$elem.position().left
+            data.init = getPositionNum(data.$elem.css('left'))
             data.pos = 'left'
         switch data.type
           when 'up', 'left' then data.limit = data.init - (data.end - data.start)
@@ -49,6 +49,13 @@
         pos = layer.limit if pos > layer.limit
         pos = layer.init if pos < layer.init
     pos
+
+  getPositionNum = (value) ->
+    res = value.match /(\d+)px/
+    if res?
+      res[1]
+    else
+      0
       
   getNumberData = (numStr) ->
     if numStr? then parseInt numStr else null
