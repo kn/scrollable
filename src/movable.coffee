@@ -53,7 +53,7 @@
   getPositionNum = (value) ->
     res = value.match /(\d+)px/
     if res?
-      res[1]
+      getNumberData(res[1])
     else
       0
       
