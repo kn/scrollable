@@ -87,7 +87,7 @@
     var res;
     res = value.match(/(\d+)px/);
     if (res != null) {
-      return res[1];
+      return getNumberData(res[1]);
     } else {
       return 0;
     }
